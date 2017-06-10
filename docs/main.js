@@ -11,8 +11,6 @@ window.onload = function () {
 };
 
 function saveImage(){
-    redraw();
-
     var inputCount = 0;
     if (textbox1.value != "") {
         inputCount += 1;
@@ -25,7 +23,6 @@ function saveImage(){
         return;
     }
 
-    context.globalCompositeOperation = "destination-over";
     context.fillStyle = "#00000000";
     context.fillRect(0,0,canvas.width,canvas.height);
 
@@ -64,6 +61,8 @@ function saveImage(){
     document.body.removeChild(downloadLink);*/
 
     window.open(img)
+
+    redraw();
 }
 
 function redraw() {
@@ -75,7 +74,6 @@ function redraw1() {
     context.font = '100px mplus-1p-black';
     var text = textbox1.value;
     context.clearRect(0, 0, canvas.width, canvas.height);
-    metrix = context.measureText(text);
 
     var posx = 70;
     var posy = 100;
