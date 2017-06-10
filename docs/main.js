@@ -154,7 +154,7 @@ function redraw2() {
     //銀色
     for (var i = 0; i < 8; i++) {
         {
-            var grad = context.createLinearGradient(0, 20, 0, posy);
+            var grad = context.createLinearGradient(0, posy - 80, 0, posy);
             grad.addColorStop(0, 'rgb(' + 10 * i + ', ' + 10 * i + ', ' + 10 * i + ')');
 
             context.strokeStyle = grad;
@@ -165,7 +165,7 @@ function redraw2() {
 
     //青
     {
-        var grad = context.createLinearGradient(0, 20, 0, posy);
+        var grad = context.createLinearGradient(0, posy - 80, 0, posy);
         grad.addColorStop(0, 'rgb(27, 38, 66)');
         grad.addColorStop(0.3, 'rgb(13, 28, 51)');
         grad.addColorStop(0.6, 'rgb(53, 62, 91)');
@@ -182,7 +182,7 @@ function redraw2() {
 
     //青
     {
-        var grad = context.createLinearGradient(0, 20, 0, posy);
+        var grad = context.createLinearGradient(0, posy - 80, 0, posy);
         grad.addColorStop(0, 'rgb(27, 38, 66)');
         grad.addColorStop(0.3, 'rgb(13, 28, 51)');
         grad.addColorStop(0.6, 'rgb(53, 62, 91)');
@@ -194,7 +194,7 @@ function redraw2() {
 
     // 薄い銀
     {
-        var grad = context.createLinearGradient(0, 20, 0, posy);
+        var grad = context.createLinearGradient(0, posy - 80, 0, posy);
         grad.addColorStop(0.1, 'rgb(161, 182, 201)');
         grad.addColorStop(0.3, 'rgb(205, 215, 225)');
         grad.addColorStop(0.5, 'rgb(240, 241, 245)');
@@ -213,9 +213,9 @@ function redraw2() {
 
     //銀
     {
-        var grad = context.createLinearGradient(0, 20, 0, posy);
+        var grad = context.createLinearGradient(0, posy - 80, 0, posy);
         grad.addColorStop(0, 'rgb(240, 246, 244)');
-        grad.addColorStop(0.5, 'rgb(160, 189, 203)');
+        grad.addColorStop(0.5, 'rgb(162, 192, 203)');
         grad.addColorStop(0.51, 'rgb(196, 215, 222)');
         grad.addColorStop(1, 'rgb(248, 250, 249)');
         context.lineWidth = 6;
@@ -225,9 +225,9 @@ function redraw2() {
 
     // 銀
     {
-        var grad = context.createLinearGradient(0, 20, 0, posy);
+        var grad = context.createLinearGradient(0, posy - 80, 0, posy);
         grad.addColorStop(0, 'rgb(240, 246, 244)');
-        grad.addColorStop(0.5, 'rgb(164, 192, 204)');
+        grad.addColorStop(0.5, 'rgb(162, 192, 203)');
         grad.addColorStop(0.51, 'rgb(196, 215, 222)');
         grad.addColorStop(1, 'rgb(248, 250, 249)');
         context.fillStyle = grad;
