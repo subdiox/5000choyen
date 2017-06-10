@@ -66,6 +66,7 @@ function saveImage(){
 }
 
 function redraw() {
+    context.clearRect(0, 0, canvas.width * 2, canvas.height * 2);
     redraw1();
     redraw2();
 }
@@ -73,7 +74,6 @@ function redraw() {
 function redraw1() {
     context.font = '100px mplus-1p-black';
     var text = textbox1.value;
-    context.clearRect(0, 0, canvas.width, canvas.height);
 
     var posx = 70;
     var posy = 100;
@@ -141,7 +141,6 @@ function redraw1() {
 function redraw2() {
     context.font = '100px YuMin-Demibold-AlphaNum'
     var text = textbox2.value;
-    context.clearRect(0, 150, canvas.width, canvas.height);
 
     var posx = 130
     var metrix1 = context.measureText(textbox1.value);
