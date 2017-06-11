@@ -80,14 +80,12 @@ function redraw1() {
 
     //銀色
     for (var i = 0; i < 10; i++) {
-        {
-            var grad = context.createLinearGradient(0, 20, 0, posy);
-            grad.addColorStop(0, 'rgb(' + 10 * i + ', ' + 10 * i + ', ' + 10 * i + ')');
+        var grad = context.createLinearGradient(0, 20, 0, posy);
+        grad.addColorStop(0, 'rgb(' + 10 * i + ', ' + 10 * i + ', ' + 10 * i + ')');
 
-            context.strokeStyle = grad;
-            context.lineWidth = 28;
-            context.strokeText(text, posx - 3 + i, posy + 2);
-        }
+        context.strokeStyle = grad;
+        context.lineWidth = 28;
+        context.strokeText(text, posx - 3 + i, posy + 2);
     }
 
     //黒色
@@ -152,14 +150,12 @@ function redraw2() {
 
     //銀色
     for (var i = 0; i < 8; i++) {
-        {
-            var grad = context.createLinearGradient(0, posy - 80, 0, posy);
-            grad.addColorStop(0, 'rgb(' + 10 * i + ', ' + 10 * i + ', ' + 10 * i + ')');
+        var grad = context.createLinearGradient(0, posy - 80, 0, posy);
+        grad.addColorStop(0, 'rgb(' + 10 * i + ', ' + 10 * i + ', ' + 10 * i + ')');
 
-            context.strokeStyle = grad;
-            context.lineWidth = 27;
-            context.strokeText(text, posx - 3 + i, posy + 2);
-        }
+        context.strokeStyle = grad;
+        context.lineWidth = 27;
+        context.strokeText(text, posx - 3 + i, posy + 2);
     }
 
     //青
