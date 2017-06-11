@@ -12,13 +12,13 @@ window.addEventListener("DOMContentLoaded", function(e){
 
 function saveImage(){
     var inputCount = 0;
-    if (textbox1.value != "") {
+    if (textbox1.value !== "") {
         inputCount += 1;
     }
-    if (textbox2.value != "") {
+    if (textbox2.value !== "") {
         inputCount += 1;
     }
-    if (inputCount == 0) {
+    if (inputCount === 0) {
         alert("文字列が入力されていないため画像を保存できません。");
         return;
     }
@@ -38,9 +38,9 @@ function saveImage(){
     }
 
     var height = 0;
-    if (inputCount == 1) {
+    if (inputCount === 1) {
         height = 135;
-    } else if (inputCount == 2) {
+    } else if (inputCount === 2) {
         height = 270;
     }
 
