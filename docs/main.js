@@ -1,3 +1,4 @@
+"use strict";
 var canvas, context, textbox1, textbox2;
 
 window.addEventListener("DOMContentLoaded", function(e){
