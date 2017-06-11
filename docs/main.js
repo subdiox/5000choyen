@@ -1,6 +1,6 @@
 var canvas, context, textbox1, textbox2;
 
-window.onload = function () {
+window.addEventListener("DOMContentLoaded", function(e){
     canvas = document.getElementById("canvas");
     textbox1 = document.getElementById("textbox1");
     textbox2 = document.getElementById("textbox2");
@@ -8,7 +8,7 @@ window.onload = function () {
     context.lineJoin = 'round';
     context.setTransform(1,0,-0.45,1,0,0);
     redraw();
-};
+});
 
 function saveImage(){
     var inputCount = 0;
