@@ -23,9 +23,6 @@ function saveImage(){
         return;
     }
 
-    context.fillStyle = "#00000000";
-    context.fillRect(0,0,canvas.width,canvas.height);
-
     var tempCanvas = document.createElement("canvas");
     tempCanvas.id = "temp_canvas";
     var tempContext = tempCanvas.getContext("2d");
