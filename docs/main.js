@@ -1,6 +1,7 @@
+"use strict";
 var canvas, context, textbox1, textbox2;
 
-window.onload = function () {
+window.addEventListener("DOMContentLoaded", function(e){
     canvas = document.getElementById("canvas");
     textbox1 = document.getElementById("textbox1");
     textbox2 = document.getElementById("textbox2");
@@ -8,17 +9,17 @@ window.onload = function () {
     context.lineJoin = 'round';
     context.setTransform(1,0,-0.45,1,0,0);
     redraw();
-};
+});
 
 function saveImage(){
     var inputCount = 0;
-    if (textbox1.value != "") {
+    if (textbox1.value !== "") {
         inputCount += 1;
     }
-    if (textbox2.value != "") {
+    if (textbox2.value !== "") {
         inputCount += 1;
     }
-    if (inputCount == 0) {
+    if (inputCount === 0) {
         alert("文字列が入力されていないため画像を保存できません。");
         return;
     }
@@ -35,9 +36,9 @@ function saveImage(){
     }
 
     var height = 0;
-    if (inputCount == 1) {
+    if (inputCount === 1) {
         height = 135;
-    } else if (inputCount == 2) {
+    } else if (inputCount === 2) {
         height = 270;
     }
 
@@ -77,14 +78,12 @@ function redraw1() {
 
     //銀色
     for (var i = 0; i < 10; i++) {
-        {
-            var grad = context.createLinearGradient(0, 20, 0, posy);
-            grad.addColorStop(0, 'rgb(' + 10 * i + ', ' + 10 * i + ', ' + 10 * i + ')');
+        var grad = context.createLinearGradient(0, 20, 0, posy);
+        grad.addColorStop(0, 'rgb(' + 10 * i + ', ' + 10 * i + ', ' + 10 * i + ')');
 
-            context.strokeStyle = grad;
-            context.lineWidth = 28;
-            context.strokeText(text, posx - 3 + i, posy + 2);
-        }
+        context.strokeStyle = grad;
+        context.lineWidth = 28;
+        context.strokeText(text, posx - 3 + i, posy + 2);
     }
 
     //黒色
@@ -149,14 +148,12 @@ function redraw2() {
 
     //銀色
     for (var i = 0; i < 8; i++) {
-        {
-            var grad = context.createLinearGradient(0, posy - 80, 0, posy);
-            grad.addColorStop(0, 'rgb(' + 10 * i + ', ' + 10 * i + ', ' + 10 * i + ')');
+        var grad = context.createLinearGradient(0, posy - 80, 0, posy);
+        grad.addColorStop(0, 'rgb(' + 10 * i + ', ' + 10 * i + ', ' + 10 * i + ')');
 
-            context.strokeStyle = grad;
-            context.lineWidth = 27;
-            context.strokeText(text, posx - 3 + i, posy + 2);
-        }
+        context.strokeStyle = grad;
+        context.lineWidth = 27;
+        context.strokeText(text, posx - 3 + i, posy + 2);
     }
 
     //青
